@@ -65,6 +65,14 @@
     - restart sensu server
     - restart sensu client
 
+# this is needed for some ruby gems
+- name: Install build-essential on debian systems
+  apt:
+    name: build-essential
+    state: present
+  when: ansible_pkg_mgr == "apt" and
+        sensu_ruby_gem_plugins|length > 0
+
 - name: install plugins from ruby gems
   gem:
     name: "{{ item }}"
