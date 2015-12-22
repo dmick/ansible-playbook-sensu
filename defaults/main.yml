@@ -51,4 +51,5 @@ sensu_handlers: []
 
 sensu_server_patch_init_scripts: true
 
-
+# a list of plugins to install as ruby gems
+sensu_ruby_gem_plugins: []

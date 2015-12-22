@@ -64,3 +64,10 @@
   notify:
     - restart sensu server
     - restart sensu client
+
+- name: install plugins from ruby gems
+  gem:
+    name: "{{ item }}"
+    state: present
+    executable: "/opt/sensu/embedded/bin/gem"
+  with_items: sensu_ruby_gem_plugins

@@ -115,6 +115,7 @@ please uses the `sensu_settings` variable, that will generate the
 `sensu_cert_dir`|String|Directory to look for the certificates|`files`
 `sensu_cert_file_name`|String|Filename of the client certificate|`sensu_client_cert.pem`
 `sensu_key_file_name`|String|Filename of the client key|`sensu_client_key.pem`
+`sensu_ruby_gem_plugins`|List|A list of plugin names to install with ruby gems|`[]`
 
 ### Client variables
 
