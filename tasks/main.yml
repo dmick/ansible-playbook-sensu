@@ -1,13 +1,13 @@
 ---
 # tasks file for sensu
 
-- include: common.yml
+- import_tasks: common.yml
 
-- include: server.yml
+- import_tasks: server.yml
   when: sensu_install_server
 
-- include: uchiwa.yml
+- import_tasks: uchiwa.yml
   when: sensu_install_server and sensu_install_uchiwa
 
-- include: client.yml
+- import_tasks: client.yml
   when: sensu_install_client
